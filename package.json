@@ -11,6 +11,7 @@
     "lint:ts": "tsc --noEmit",
     "db:studio": "prisma studio",
     "db:seed": "ts-node ./src/prisma/seeds/index.ts",
+    "db:init": "prisma migrate deploy && prisma migrate generate",
     "db:migrate:create": "prisma migrate dev",
     "db:migrate": "prisma migrate deploy",
   },
