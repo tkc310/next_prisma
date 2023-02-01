@@ -13,7 +13,6 @@
     "db:seed": "ts-node ./src/prisma/seeds/index.ts",
     "db:migrate:create": "prisma migrate dev",
     "db:migrate": "prisma migrate deploy",
-    "db:migrate:prod": "prisma db push"
   },
   "dependencies": {
     "@prisma/client": "4.9.0",
