@@ -30,7 +30,8 @@ $ npm i
 
 # db (install docker and docker-compose beforehand)
 $ docker-compose up
-$ npm run migrate
+$ npm run db:init
+$ npm run db:seed
 $ docker container exec -it db bash
 $ psql -d test_db
 $ \dt
