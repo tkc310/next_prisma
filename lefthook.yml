@@ -1,0 +1,6 @@
+pre-push:
+  commands:
+    lint:
+      run: npm run lint
+    lint:ts:
+      run: npm run lint:ts
