@@ -18,7 +18,8 @@ api routesにメールアドレスxパスワード認証APIを生やしている
 - prisma単体でみてもproduction readyだと思った  
 - vercelを使いたかったのでnext.jsを使ったけど、疎結合にできたのでnest.jsなどへの移管も楽にできそう  
 - サクッと作るためにGraphQL, OpenAPI使わなかったけどnext.js単体で使うならtRPCで型つけてもいいかも  
-https://zenn.dev/is_ryo/articles/08a9710d9f6ee2
+https://zenn.dev/is_ryo/articles/08a9710d9f6ee2  
+- なお、1週間アクセスしてないとプロジェクトが消える (restoreする必要がある)
 
 ## Introduction
 
