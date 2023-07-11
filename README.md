@@ -53,3 +53,41 @@ $ echo "DATABASE_URL=postgresql://root:secret@localhost:5432/test_db" >> .env
 # development build (Live Reload)
 $ npm run dev
 ```
+
+## CLI
+
+[command reference](https://www.prisma.io/docs/reference/api-reference/command-reference#db)
+
+- `prisma db push` - マイグレーションせずにschema to db
+- `prisma db pull` - db to schema
+- `prisma generate` - クライアントコード `prisma.xxx` の生成・更新
+- `prisma migrate deploy` - db to schema, dbとschemaの差分を検出して未実行のマイグレーションのみ行われる
+- `prisma migrate dev` - マイグレーションファイル生成、クライアントコードの生成・更新
+- `prisma reset` - db再作成
+- `prisma resolve` - 失敗としてマークされたマイグレーションをスキップして実行
+- `prisma status` - マイグレーションの適用状況を出力 (ファイルとmigrationsテーブルの読み取り)
+
+## Query Method
+
+[model queries](https://www.prisma.io/docs/reference/api-reference/prisma-client-reference#model-queries)
+
+- findUnique - 引数: id or attribute, return: 単一レコード
+- findFirst - return: 先頭レコード
+- findMany - 引数: SQL条件句, return 複数レコード
+- create
+- update
+- upsert
+- delete
+- createMany - bulk create
+- updateMany - bulk update
+- deleteMany - bulk delete
+- aggregate - 引数: SQL条件句, return 集約オブジェクト (count, sum, avg, min, maxメソッドが生えている)
+- count
+- groupBy
+
+### JOIN
+include or select引数を利用する  
+カラムを制限する場合はselect、全カラム取得の場合はinclude  
+https://wp-kyoto.net/prisma-select-relational-table-data/
+
+
