@@ -59,7 +59,8 @@ $ npm run dev
 [command reference](https://www.prisma.io/docs/reference/api-reference/command-reference#db)
 
 - `prisma db push` - マイグレーションせずにschema to db
-- `prisma db pull` - db to schema
+- `prisma db pull` - db to schema -> 外部サービスから作成・利用されているテーブルをschema.prismaに反映
+  - `--print` - dry run
 - `prisma generate` - クライアントコード `prisma.xxx` の生成・更新
 - `prisma migrate deploy` - db to schema, dbとschemaの差分を検出して未実行のマイグレーションのみ行われる
 - `prisma migrate dev` - マイグレーションファイル生成、クライアントコードの生成・更新
