@@ -9,7 +9,7 @@ api routesにメールアドレスxパスワード認証APIを生やしている
 - 無料でDB付きのAPIをホスティングしたい  
 - 静的ではないWebサービスのホスティング先としてダウンタイム無しで無料で使おうとすると、使い勝手も含めてvercel一択になると思っている  
 (render.comはダウンタイムがある、その他は直ぐに無料期間・従量が終わる)  
-- RDBについては他にもあるかもしれないけど知名度・使い勝手的にsupabaseが良さそう  
+- RDBについては他にもあるかもしれないけど知名度・使い勝手的にsupabaseが良さそう (vercel postgresに期待)  
 - ある程度マネタイズできたらsupabaseからawsなどに移管したいためsupabaseクライアントに依存したくない
 - prismaを使えばsupabaseに依存しない
 
@@ -91,4 +91,8 @@ include or select引数を利用する
 カラムを制限する場合はselect、全カラム取得の場合はinclude  
 https://wp-kyoto.net/prisma-select-relational-table-data/
 
+## Rollback (downgrade script)
+rollbackするための機能は持っている。  
+downgrade sqlを生成するCLIオプションも存在している。  
+https://www.prisma.io/docs/guides/migrate/developing-with-prisma-migrate/generating-down-migrations
 
